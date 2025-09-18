@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="py-6 px-4 md:px-12 lg:px-24 fixed w-full z-50 bg-black bg-opacity-90">
+        <div class="flex justify-between items-center">
+            <div class="text-4xl font-bold text-white">Mobile<span class="text-blue-500">Matrix</span></div>
+            <nav class="hidden md:flex space-x-8 text-white text-2xl">
+                <a href="#home" class="hover:text-blue-400 transition">Home</a>
+                <a href="#phones" class="hover:text-blue-400 transition">Phones</a>
+                <a href="#about" class="hover:text-blue-400 transition">About</a>
+            </nav>
+            <button class="md:hidden">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </header>
+
+     <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-4 md:px-12 lg:px-24 pt-24">
+        <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover -z-10">
+            <source src="./video/25714-352026498_medium.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-black/50 -z-10"></div>
+            <div class="text-center relative z-10">
+                <h1 class="text-6xl md:text-7xl font-bold mb-9 hero-title text-white glow">Discover the World of Mobiles</h1>
+                <p class="text-xl md:text-2xl text-gray-800 mb-9 max-w-2xl mx-auto hero-subtitle font-bold">
+                    Unfolding the story of mobiles through GSAP animations. <br> Discover what makes every mobile category special
+                </p>
+            </div>
+    </section>
+
+
+    <!-- Phones Section -->
+    <section id="phones" class="py-20 px-4 md:px-12 lg:px-24">
+        <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center collection-title">
+            <span class="inline-block collection-word-1">Our</span>
+            <span class="inline-block collection-word-2">Latest</span>
+            <span class="inline-block collection-word-3">Collection</span>
+        </h2>
+        
+        <!-- Phone 1 -->
+        <div class="flex flex-col lg:flex-row items-center justify-between mb-32 phone-section">
+            <div class="phone-img lg:w-1/2 mb-2 lg:mb-0">
+                <div class="relative w-full max-w-md mx-auto">
+                    <div class="phone-frame absolute inset-0 border-8 border-gray-800 rounded-[40px] shadow-xl"></div>
+                    <img src="./images/iPhone-17-Pro-e1740758841492-removebg-preview.png" alt="Phone 1" class="rounded-[32px] relative z-0">
+                </div>
+            </div>
+            <div class="phone-details lg:w-1/2 lg:pl-16">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">Galaxy Pro X</h3>
+                <p class="text-gray-300 mb-6">
+                    Experience the ultimate in mobile performance with our flagship device featuring a 120Hz AMOLED display and revolutionary camera system.
+                </p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> 6.7" Dynamic AMOLED 2X</li>
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> 108MP Pro-grade Camera</li>
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> 5000mAh All-day Battery</li>
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> 5G Connectivity</li>
+                </ul>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition transform hover:scale-105">
+                    Learn More
+                </button>
+            </div>
+        </div>
+
+        <div class="section-divider my-20"></div>
+
+
+        <!-- Phone 2 -->
+        <div class="flex flex-col lg:flex-row-reverse items-center justify-between mb-32 phone-section">
+            <div class="phone-img lg:w-1/2 mb-12 lg:mb-0">
+                <div class="relative w-full max-w-md mx-auto">
+                    <div class="phone-frame absolute inset-0 border-8 border-gray-800 rounded-[40px] shadow-xl"></div>
+                    <img src="http://static.photos/technology/360x640/2" alt="Phone 2" class="rounded-[32px] relative z-10">
+                    <div class="absolute top-4 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-gray-900 rounded-full z-20"></div>
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gray-700 rounded-full z-20"></div>
+                </div>
+            </div>
+            <div class="phone-details lg:w-1/2 lg:pr-16">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">iPhone Ultra</h3>
+                <p class="text-gray-300 mb-6">
+                    The most powerful iPhone ever with our custom A16 Bionic chip and cinematic mode for professional-quality videos.
+                </p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> 6.1" Super Retina XDR</li>
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> A16 Bionic Chip</li>
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> Cinematic Mode</li>
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> iOS 16</li>
+                </ul>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition transform hover:scale-105">
+                    Learn More
+                </button>
+            </div>
+        </div>
+
+        <div class="section-divider my-20"></div>
+
+        <!-- Phone 3 -->
+        <div class="flex flex-col lg:flex-row items-center justify-between mb-32 phone-section">
+            <div class="phone-img lg:w-1/2 mb-12 lg:mb-0">
+                <div class="relative w-full max-w-md mx-auto">
+                    <div class="phone-frame absolute inset-0 border-8 border-gray-800 rounded-[40px] shadow-xl"></div>
+                    <img src="http://static.photos/technology/360x640/3" alt="Phone 3" class="rounded-[32px] relative z-0">
+                    <div class="absolute top-5 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-gray-900 rounded-full z-20"></div>
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gray-900 rounded-full z-20 border-2 border-gray-700"></div>
+                </div>
+            </div>
+            <div class="phone-details lg:w-1/2 lg:pl-16">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">Pixel Pro</h3>
+                <p class="text-gray-300 mb-6">
+                    Google's most advanced Pixel yet with Tensor G2 chip, real-time translation, and magic eraser for photos.
+                </p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> 6.7" LTPO OLED</li>
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> Tensor G2 Processor</li>
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> Magic Eraser</li>
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> 30x Super Res Zoom</li>
+                </ul>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition transform hover:scale-105">
+                    Learn More
+                </button>
+            </div>
+        </div>
+
+        <div class="section-divider my-20"></div>
+
+        <!-- Phone 4 -->
+        <div class="flex flex-col lg:flex-row-reverse items-center justify-between mb-32 phone-section">
+            <div class="phone-img lg:w-1/2 mb-12 lg:mb-0">
+                <div class="relative w-full max-w-md mx-auto">
+                    <div class="phone-frame absolute inset-0 border-8 border-gray-800 rounded-[40px] shadow-xl"></div>
+                    <img src="http://static.photos/technology/360x640/4" alt="Phone 4" class="rounded-[32px] relative z-10">
+                    <div class="absolute top-4 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-gray-900 rounded-full z-20"></div>
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gray-700 rounded-full z-20"></div>
+                    <div class="absolute left-4 top-1/2 transform -translate-y-1/2 w-1 h-16 bg-gray-700 rounded-full z-20"></div>
+                </div>
+            </div>
+            <div class="phone-details lg:w-1/2 lg:pr-16">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">OnePlus 11 Pro</h3>
+                <p class="text-gray-300 mb-6">
+                    Flagship killer with Hasselblad camera, 120Hz Fluid AMOLED, and blazing fast charging.
+                </p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> 6.7" 120Hz AMOLED</li>
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> Snapdragon 8 Gen 2</li>
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> 100W Fast Charging</li>
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> Hasselblad Camera</li>
+                </ul>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition transform hover:scale-105">
+                    Learn More
+                </button>
+            </div>
+        </div>
+
+        <div class="section-divider my-20"></div>
+
+        <!-- Phone 5 -->
+        <div class="flex flex-col lg:flex-row items-center justify-between mb-32 phone-section">
+            <div class="phone-img lg:w-1/2 mb-12 lg:mb-0">
+                <div class="relative w-full max-w-md mx-auto">
+                    <div class="phone-frame absolute inset-0 border-8 border-gray-800 rounded-[40px] shadow-xl"></div>
+                    <img src="http://static.photos/technology/360x640/5" alt="Phone 5" class="rounded-[32px] relative z-10">
+                    <div class="absolute top-4 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-gray-900 rounded-full z-20"></div>
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gray-900 rounded-full z-20 border-2 border-gray-700"></div>
+                    <div class="absolute right-4 top-1/2 transform -translate-y-1/2 w-1 h-16 bg-gray-700 rounded-full z-20"></div>
+                </div>
+            </div>
+            <div class="phone-details lg:w-1/2 lg:pl-16">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">Xiaomi 13 Ultra</h3>
+                <p class="text-gray-300 mb-6">
+                    Photography powerhouse with 1-inch sensor, Leica optics, and 120W HyperCharge.
+                </p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> 6.73" AMOLED 120Hz</li>
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> 1" Main Sensor</li>
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> Leica Optics</li>
+                    <li class="flex items-center"><i data-feather="check" class="mr-2 text-blue-500"></i> 120W HyperCharge</li>
+                </ul>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition transform hover:scale-105">
+                    Learn More
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    
+</body>
+</html>
